@@ -1,0 +1,12 @@
+.left {
+    width: 16%;
+    height: 100%;
+    position: relative;
+}
+
+.content-holder {
+    padding: 16px 145px;
+    width: 86%;
+    height: 100%;
+    position: relative;
+}

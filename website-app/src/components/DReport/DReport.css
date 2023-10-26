@@ -1,0 +1,44 @@
+.daily-holder {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-top: 26px;
+    color: #CFD3EC;
+}
+
+.daily {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: #2F3349;
+    border-radius: 6px;
+}
+
+.daily .title {
+    width: 100%;
+    text-align: left;
+    font-family: Medium;
+    font-size: 22px;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.daily .date {
+    position: relative;
+    display: flex;
+    margin-top: 35px;
+}
+
+.user-titles ul {
+    margin: auto;
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.user-titles ul li {
+    list-style: none;
+    font-family: Medium;
+    font-size: ;
+}

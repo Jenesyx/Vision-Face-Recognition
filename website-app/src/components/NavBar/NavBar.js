@@ -7,10 +7,10 @@ function NavBar() {
         <div className='nav-holder'>
             <div className='nav'>
                 <div className="user">
-                    <h3>User : Admin</h3>
+                    <p>User : Admin</p>
                 </div>
                 <div className="welcome">
-                    <h2>Welcome to your Vision</h2>
+                    <p>Welcome to your Vision</p>
                 </div>
             </div>
         </div>

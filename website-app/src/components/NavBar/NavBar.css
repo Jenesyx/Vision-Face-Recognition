@@ -15,11 +15,14 @@
 }
 
 .nav .user {
+    letter-spacing: 0.6px;
+    font-size: 16px;
     font-family: Regular;
     width: 14%;
 }
 
 .nav .welcome {
+    font-size: 20px;
     font-family: SemiBold;
     width: 70%;
     text-align: center;

@@ -25,9 +25,10 @@
 }
 
 .daily .date {
-    position: relative;
     display: flex;
-    margin-top: 35px;
+    margin: auto;
+    width: 25%;
+    justify-content: space-evenly;
 }
 
 .user-titles ul {
@@ -40,5 +41,6 @@
 .user-titles ul li {
     list-style: none;
     font-family: Medium;
-    font-size: ;
+    color: #B6BEE3;
+    font-size: 18px;
 }

@@ -11,7 +11,7 @@ function DReport() {
                 </div>
                 <div className='date'>
                     <img src="" alt="" />
-                    <p></p>
+                    <p>23.10.2023</p>
                     <img src="" alt="" />
                 </div>
                 <div className="user-titles">

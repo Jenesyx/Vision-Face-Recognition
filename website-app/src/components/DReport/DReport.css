@@ -25,10 +25,25 @@
 }
 
 .daily .date {
+    align-items: center;
     display: flex;
     margin: auto;
-    width: 25%;
+    width: 15%;
     justify-content: space-evenly;
+}
+
+.daily .date p {
+    font-family: Regular;
+}
+
+.chevron {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.daily .date .chevron img {
+    width: 100%;
 }
 
 .user-titles ul {
@@ -43,4 +58,53 @@
     font-family: Medium;
     color: #B6BEE3;
     font-size: 18px;
+}
+
+.users-daily {
+    margin-top: 15px;
+    height: 65%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    border-radius: 6px;
+}
+
+.users-daily ul {
+    display: flex;
+    width: 71%;
+    margin: auto;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.users-daily ul li {
+    list-style: none;
+    font-family: Regular;
+    color: #939AC2;
+    font-size: 16px;
+    width: 150px;
+}
+
+.users-daily::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(115, 103, 240, 0.24);
+}
+
+.users-daily::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: transparent;
+}
+
+.users-daily::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(115, 103, 240, 0.48);;
 }

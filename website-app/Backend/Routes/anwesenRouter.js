@@ -1,8 +1,8 @@
 const express = require("express");
-const anwesenheit = require("./../database/anwesenheit");
-const homePageRouter = express.Router();
+const anwesenheit = require("../database/anwesenheit");
+const anwesenRouter = express.Router();
 
-homePageRouter.get("/", (req, res) => {
+anwesenRouter.get("/", (req, res) => {
   let getAllCurrentPositionQuery = `SELECT * FROM anwesenheit`;
   anwesenheit.query(getAllCurrentPositionQuery, (err, result) => {
     if (err) {
@@ -13,4 +13,4 @@ homePageRouter.get("/", (req, res) => {
   });
 });
 
-module.exports = homePageRouter
+module.exports = anwesenRouter

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/homepage" element={<HomePage />} />
+          <Route path="*" element={<Navigate to="/"/>}/>
         </Routes>
       </Router>
     </div>

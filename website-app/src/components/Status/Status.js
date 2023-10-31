@@ -41,7 +41,7 @@ function Status(props) {
                             </div>
                         </div>
                         <div className="status-circle">
-                            <ProgressBar percentage={mainpercentage.toFixed(1)}/>
+                                <ProgressBar percentage={mainpercentage.toFixed(1)}/>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import Status from '../../components/Status/Status'
 import DReport from '../../components/DReport/DReport'
 import menu from '../../images/menu2.png'
+import close from '../../images/Close.png'
 
 function HomePage() {
 
@@ -15,6 +16,13 @@ function HomePage() {
   const [dataSchueler, setDataSchueler] = useState([]);
   const [dataAnwesen, setDataAnwesen] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [goRight, setGoRight] = useState(false)
+  const [hide, setHide] = useState(false)
+
+  const handleIslandClick = () => {
+    setGoRight(!goRight);
+    setHide(!hide)
+  }
 
   const fetchData = (date) => {
     axios.get('http://localhost:4000/api/main', {
@@ -94,12 +102,18 @@ function HomePage() {
     setDate(newDate);
   };
 
+
+  
+
   return (
     <>
-      <div className='hamb'>
-        <img src={menu} alt="hamb menu" />
+      <div className={`hamb ${hide ? 'highlight' : ''}`}>
+        <img src={menu} alt="menu icon" onClick={handleIslandClick}/>
       </div>
-        <div className='left'>
+      <div className={`close-hamb ${hide ? '' : 'highlight'}`}>
+        <img src={close} alt="close icon" onClick={handleIslandClick}/>
+      </div>
+        <div className={`left ${goRight ? 'highlight' : ''}`}>
             <SideBar/>
         </div>
         <div className='content-holder'>

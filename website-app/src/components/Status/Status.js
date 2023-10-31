@@ -4,29 +4,11 @@ import axios from 'axios'
 import './Status.css'
 import ProgressBar from '../ProgressBar/ProgressBar'
 
-function Status() {
-    const [dataCount, setDataCount] = useState([])
-    const [dataMain, setDataMain] = useState([])
-    useEffect(() => {
-        axios.get('http://localhost:4000/api/count')
-            .then((response) => {
-                setDataCount(response.data);
-                console.log('Data for "count":', response.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching "count" data:', error);
-            });
-        axios.get('http://localhost:4000/api/main')
-            .then((response) => {
-                setDataMain(response.data);
-                console.log('Data for "main":', response.data);
-            })
-            .catch((error) => { 
-                console.error('Error fetching "main" data:', error);
-            });
-    }, []);
+function Status(props) {
+    const { dataMain, dataCount } = props;
+    
 
-    const i = 0
+    let i = 0
     let mainpercentage = 0
     
     dataMain.map((item) => {
@@ -34,6 +16,7 @@ function Status() {
             i+=1
         }
     })
+
     dataCount.map((item) => {
         mainpercentage = (i / item.Schueler) * 100
     })

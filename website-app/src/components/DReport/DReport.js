@@ -5,45 +5,8 @@ import chevronRight from '../../images/chevron-right.png'
 import chevronLeft from '../../images/chevron-left.png'
 import './DReport.css'
 
-function DReport() {
-
-    const [dataMain, setDataMain] = useState([])
-    const [dataSchueler, setDataSchueler] = useState([]);
-    const [dataAnwesen, setDataAnwesen] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://localhost:4000/api/main')
-            .then((response) => {
-                setDataMain(response.data);
-                console.log('Data for "main":', response.data);
-            })
-            .catch((error) => { 
-                console.error('Error fetching "main" data:', error);
-            });
-
-        axios.get('http://localhost:4000/api/schueler')
-            .then((response) => {
-                setDataSchueler(response.data);
-                console.log('Data for "schueler":', response.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching "schueler" data:', error);
-            });
-        axios.get('http://localhost:4000/api/anwesenheit')
-        .then((response) => {
-            setDataAnwesen(response.data);
-            console.log('Data for "anwesen":', response.data);
-        })
-        .catch((error) => {
-            console.error('Error fetching "anwesen" data:', error);
-        });
-    }, []);
-    const count = 0
-    dataMain.map((item) => {
-        if(item.Ankunftszeit == '00:00:00'){
-            item.Ankunftszeit = ''
-        }
-    })
+function DReport(props) {
+    const { dataMain, date, onDateChange, getDateYesterday, getDateTomorrow } = props;
 
     return (
         <>
@@ -53,12 +16,12 @@ function DReport() {
                         <p>Daily Report</p>
                     </div>
                     <div className='date'>
-                        <div className='chevron'>
+                        <div className='chevron' onClick={() => onDateChange(getDateYesterday())}>
                             <img src={chevronLeft} alt="left" />
                         </div>
-                        <p>23.10.2023</p>
+                        <p>{date.toLocaleDateString()}</p>
                         <div className='chevron'>
-                            <img src={chevronRight} alt="right" />
+                            <img src={chevronRight} alt="right" onClick={() => onDateChange(getDateTomorrow())} />
                         </div>
                     </div>
                     <div className="user-titles">
@@ -69,6 +32,7 @@ function DReport() {
                         </ul>
                     </div>
                     <div className="users-daily">
+                        <div className={`noBodyHome ${dataMain == '' ? 'highlight' : ''}`}>NOTHING</div>
                         {dataMain.map((item) => (
                         <ul>
                             <li>{item.Vorname} {item.Nachname}</li>

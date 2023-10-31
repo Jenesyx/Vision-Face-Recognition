@@ -6,6 +6,7 @@ import SideBar from '../../components/Sidebar/SideBar'
 import NavBar from '../../components/NavBar/NavBar'
 import Status from '../../components/Status/Status'
 import DReport from '../../components/DReport/DReport'
+import menu from '../../images/menu2.png'
 
 function HomePage() {
 
@@ -95,6 +96,9 @@ function HomePage() {
 
   return (
     <>
+      <div className='hamb'>
+        <img src={menu} alt="hamb menu" />
+      </div>
         <div className='left'>
             <SideBar/>
         </div>

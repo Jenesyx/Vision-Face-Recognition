@@ -10,6 +10,7 @@ function NavBar() {
                     <p>User : Admin</p>
                 </div>
                 <div className="welcome">
+                    <p className='nav-mobile'>Hello Admin</p>
                     <p>Welcome to your Vision</p>
                 </div>
             </div>

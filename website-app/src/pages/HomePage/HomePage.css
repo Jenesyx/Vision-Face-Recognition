@@ -10,3 +10,65 @@
     height: 100%;
     position: relative;
 }
+
+.hamb {
+    display: block;
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 32px;
+    height: 32px;
+    background-color: #2F3349;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.hamb:hover {
+    cursor: pointer;
+}
+
+.hamb img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+    .left {
+        width: 0%;
+    }
+
+    .content-holder {
+        margin: auto;
+        width: 100%;
+        padding: 20px 5px;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%)
+    }
+
+    .nav {
+        background-color: transparent !important;
+    }
+
+    .nav-holder{
+        margin: auto;
+        width: 90% !important;
+        height: 100px;
+    }
+
+    .welcome p:nth-child(2) {
+        display: none;
+    }
+
+    .welcome {
+        width: 100% !important;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block !important;
+    }
+}

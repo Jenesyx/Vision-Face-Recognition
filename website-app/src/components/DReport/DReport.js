@@ -1,6 +1,4 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
-import axios from 'axios'
 import chevronRight from '../../images/chevron-right.png'
 import chevronLeft from '../../images/chevron-left.png'
 import './DReport.css'
@@ -28,7 +26,7 @@ function DReport(props) {
                         <ul>
                             <li>Username</li>
                             <li>Begin at</li>
-                            <li>Finish at</li>
+                             <li>Finish at</li>
                         </ul>
                     </div>
                     <div className="users-daily">

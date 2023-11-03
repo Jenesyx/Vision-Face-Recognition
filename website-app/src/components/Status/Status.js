@@ -1,18 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
-import axios from 'axios'
 import './Status.css'
 import ProgressBar from '../ProgressBar/ProgressBar'
 
 function Status(props) {
     const { dataMain, dataCount } = props;
     
-
     let i = 0
     let mainpercentage = 0
     
     dataMain.map((item) => {
-        if(item.Gangzeit == '00:00:00' && item.Ankunftszeit != '00:00:00'){
+        if(item.Gangzeit == '' && item.Ankunftszeit != ''){
             i+=1
         }
     })
@@ -41,7 +38,7 @@ function Status(props) {
                             </div>
                         </div>
                         <div className="status-circle">
-                                <ProgressBar percentage={mainpercentage.toFixed(1)}/>
+                            <ProgressBar percentage={mainpercentage.toFixed(1)}/>
                         </div>
                     </div>
                 </div>

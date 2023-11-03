@@ -19,3 +19,18 @@ git push -uf origin main
 git clone git@gitlab.com:bktmpdr/itas/2021_ait/ait30v-2023_24/projektarbeit/ali-marcel-niklas/website.git
 cd website
 ```
+
+
+### How to Push
+```
+git status
+git add 'folder/file'
+git add commit -m "reason"
+git push
+```
+
+
+### How to Pull
+```
+git pull origin main
+```
